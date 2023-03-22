@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: PY-DNG's F**king Homo
-subtitle: 'Home, not Homo'
-description: '嗯，嘛，啊！'
-keywords: 嗯 嘛 啊 哼
+title: 欲戴王冠，必承其重
+subtitle: Everytime you get stronger, the world gets friendlier
+description: PY-DNG's little castle
+keywords: 
 author: PY-DNG
 language: zh
-timezone: 'UTC+8'
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://pyudng.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -31,7 +31,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title_:year-:month-:day-.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -97,7 +97,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Kratos-Rebirth
+#landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
