@@ -27,6 +27,11 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+      - name: Update hexo-asset-image
+        run: |
+          cd node_modules
+          rm -r -f hexo-image-link
+          git clone https://github.com/PYUDNG/hexo-image-link.git
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
