@@ -1,4 +1,4 @@
-import 'fs';
+const fs = require('fs');
 
 const cwd = process.cwd();
 mergeFolder(cwd, path.directory(cwd));
