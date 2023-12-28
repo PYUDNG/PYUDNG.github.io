@@ -6,7 +6,13 @@ mergeFolder(cwd, path.dirname(cwd), true);
 
 function mergeFolder(from, to, overwrite=false) {
 	debug(`Merging directory ${from} to ${to}`);
-	try { fs.accessSync(to, fs.constants.F_OK) } catch(e) { fs.mkdirSync(to); }
+	try {
+		fs.accessSync(to, fs.constants.F_OK);
+		debug(`Directory exists: ${to}`);
+	} catch(e) {
+		fs.mkdirSync(to);
+		debug(`Directory made: ${to}`);
+	}
 
 	const items = fs.readdirSync(from, { withFileTypes: true });
 	for (const item of items) {
