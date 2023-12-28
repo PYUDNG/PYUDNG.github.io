@@ -22,7 +22,7 @@ function mergeFolder(from, to, overwrite=false) {
 			fs.copyFileSync(item_path, dest_path,
 				overwrite ? fs.constants.COPYFILE_FICLONE : fs.constants.COPYFILE_EXCL);
 		} else if (item.isDirectory()) {
-			mergeFolder(item_path, dest_path);
+			mergeFolder(item_path, dest_path, overwrite);
 		} else {
 			console.log('Not a file nor a directory:' + item_path);
 		}
