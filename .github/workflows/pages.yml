@@ -27,7 +27,7 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
-#      - name: Update hexo-asset-image
+#      - name: Update hexo-image-link
 #        run: |
 #          cd node_modules
 #          rm -r -f hexo-image-link
