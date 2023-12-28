@@ -23,7 +23,10 @@ function mergeFolder(from, to, overwrite=false) {
 			debug(`Copying file ${item_path} to ${dest_path}`);
 			try {
 				fs.accessSync(dest_path, fs.constants.F_OK);
-				overwrite && fs.unlinkSync(dest_path);
+				if (overwrite) {
+					debug(`Unlinking file: ${dest_path}`);
+					fs.unlinkSync(dest_path);
+				}
 			} catch(e) {}
 			fs.copyFileSync(item_path, dest_path,
 				overwrite ? fs.constants.COPYFILE_FICLONE : fs.constants.COPYFILE_EXCL);
