@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const cwd = process.cwd();
-mergeFolder(cwd, path.dirname(cwd));
+mergeFolder(cwd, path.dirname(cwd), true);
 
 function mergeFolder(from, to, overwrite=false) {
 	console.log(`Merging directory ${from} to ${to}`);
