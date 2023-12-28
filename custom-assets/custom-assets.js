@@ -12,6 +12,7 @@ function mergeFolder(from, to, overwrite=false) {
 	for (const item of items) {
 		const item_path = path.resolve(item.path, item.name);
 		const dest_path = path.resolve(to, item.name);
+		console.log([item, item_path, dest_path]);
 		if (item.isFile()) {
 			console.log(`Copying file ${item_path} to ${dest_path}`);
 			overwrite && fs.accessSync(dest_path, fs.constants.F_OK) && fs.unlinkSync(dest_path);
