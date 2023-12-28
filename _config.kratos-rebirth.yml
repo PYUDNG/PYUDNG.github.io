@@ -191,7 +191,7 @@ search:
 jsconfig:
   main:
     cover:
-      randomAmount: 21 # 表示从1~20
+      randomAmount: 20 # 表示从1~20
       baseUrl: 'https://fastly.jsdelivr.net/gh/PYUDNG/PYUDNG.github.io@main/custom-assets/excludes/post-covers/' # 使用默认值（不单独配置），将跟随 vendors 中的相关设定选择是否使用 cdn
       filenameTemplate: "thumb_{no}.webp" 
     createTime: "2023/03/17 14:24:00"
