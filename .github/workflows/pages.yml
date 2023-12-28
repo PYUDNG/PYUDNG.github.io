@@ -15,9 +15,9 @@ jobs:
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: 'latest'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
@@ -34,9 +34,14 @@ jobs:
           git clone https://github.com/PYUDNG/hexo-image-link.git
       - name: Output Debug Info
         run: |
+          node --version
+          echo ls
           ls
+          echo _config.kratos-rebirth.yml
           cat _config.kratos-rebirth.yml
+          echo _config.yml
           cat _config.yml
+          echo node_modules
           cd node_modules
           ls
       - name: Build
