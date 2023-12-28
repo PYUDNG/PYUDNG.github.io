@@ -37,6 +37,9 @@ jobs:
           node --version
           echo
           npx hexo --version
+          echo
+          cd node_modules
+          ls
       - name: Build
 #        run: npm run build
         run: |
