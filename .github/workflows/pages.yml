@@ -27,25 +27,17 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
-      - name: Update hexo-asset-image
+#      - name: Update hexo-asset-image
+#        run: |
+#          cd node_modules
+#          rm -r -f hexo-image-link
+#          git clone https://github.com/PYUDNG/hexo-image-link.git
+      - name: Install custom assets
         run: |
-          cd node_modules
-          rm -r -f hexo-image-link
-          git clone https://github.com/PYUDNG/hexo-image-link.git
-      - name: Output Debug Info
-        run: |
-          node --version
-          echo
-          npx hexo --version
-          echo
-          cd node_modules
-          ls
+          cd custom-assets
+          node custom-assets.js
       - name: Build
-#        run: npm run build
-        run: |
-          npx hexo -v
-          npx hexo clean
-          npx hexo generate --debug
+        run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
