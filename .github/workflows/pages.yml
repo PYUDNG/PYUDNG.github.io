@@ -36,7 +36,7 @@ jobs:
         run: |
           node --version
           echo
-          hexo --version
+          npx hexo --version
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
