@@ -38,7 +38,11 @@ jobs:
           echo
           npx hexo --version
       - name: Build
-        run: npm run build
+#        run: npm run build
+        run: |
+          npx hexo -v
+          npx hexo clean
+          npx hexo generate --debug
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
