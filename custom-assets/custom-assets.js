@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const cwd = process.cwd();
-mergeFolder(cwd, path.directory(cwd));
+mergeFolder(cwd, path.dirname(cwd));
 
 function mergeFolder(from, to, overwrite=false) {
 	const items = fs.readdirSync(from, { withFileTypes: true });
