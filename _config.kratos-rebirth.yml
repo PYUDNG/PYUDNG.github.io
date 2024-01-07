@@ -238,3 +238,10 @@ friends:
 # Misc 杂项
 misc:
   showWordCountEstimateWavy: true # 在文章字数处显示表示大约字数的波浪号
+
+# hexo-math / mathjax
+# https://clarkchen.com/Hexo/HEXO%E6%98%BE%E7%A4%BALatex%E5%85%AC%E5%BC%8F/
+mathjax:
+  enable: true # 默认为False
+  # See: https://mhchem.github.io/MathJax-mhchem/
+  mhchem: false
