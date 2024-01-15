@@ -1,6 +1,6 @@
 const scripts = [{
     url: '/js/custom-post-js.js',
-    to: 'post'
+    //to: 'post' // Pjax don't load scripts and styles specified at post pages when switching to post pages!
 }, {
     url: '/js/you-are-right.js'
 }].map(script => Object.assign({
@@ -10,7 +10,7 @@ const scripts = [{
 
 const styles = [{
     url: '/css/custom-post-styles.css',
-    to: 'post'
+    //to: 'post' // Pjax don't load scripts and styles specified at post pages when switching to post pages!
 }].map(style => Object.assign({
     url: 'data:text/css,',
     to: 'default'
